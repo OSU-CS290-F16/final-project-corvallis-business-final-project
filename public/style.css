@@ -1,1 +1,66 @@
-/*empty css file*/
+
+header{
+	position: relative;
+	top: -20px;
+	width: 100%;
+}
+
+/* Needs to be adjusted for positioning */
+h1{
+	padding: 10px; 
+	background-color: #a00826;
+	color: white;
+	top: 15px;
+}
+ 
+.navbar-buttons{
+	 height: 18px;
+	 list-style-type: none; /* Removes bullets from list */
+	 padding: 5px;
+	 background-color: #333333; 
+	 position: relative;
+	 top: -22px;
+	 border: none;
+}
+
+.navbar-buttons li{
+	 display: inline;
+}
+
+.navbar-buttons li a{
+	 padding: 20px; 
+	 font-family: Arial;
+	 color: white;
+	 text-decoration: none;
+ }
+ 
+.navbar-buttons li:hover {
+	 background-color: #444444;
+}
+
+.navbar-right{
+	 float: right;
+}
+
+.business{
+	position: relative;
+	top: -30px;
+	display: inline-block;
+	margin: 10px;
+	width: 350px;
+	height: 275px;
+	padding: 2px;
+	border: 20px solid rgba(0, 0, 0, 0);
+	background-color: gray;
+	float: left;
+}
+
+.business img{
+	display: block;
+	margin: auto;
+}
+
+.business p{
+	font-weight: bold;
+	text-align: center;
+}
