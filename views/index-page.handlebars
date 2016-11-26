@@ -2,6 +2,7 @@
 
 <main>
     <div>
+        
         <section class="business">
             <img src="./images/memorial_union.jpg" width=265px height=200px></img><!-- Placeholder image -->
             <div class="business-body">
@@ -49,6 +50,12 @@
                 <p class="indent-wrapped"><span class="type">Placeholder Type</span></p>
             </div>
         </section>
+        
+  <!-- These show the businesses in place-data.json -->
+        {{#each placeData}}
+            {{> business}}
+        {{/each}}
+        
     </div>
 </main>
 

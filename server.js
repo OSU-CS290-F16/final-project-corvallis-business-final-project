@@ -53,6 +53,14 @@ app.get('/search', function (req, res) {
     });
 });
 
+//for '/new' - search page     
+app.get('/new', function (req, res) {
+    res.status(200).render('new-page', {
+        title: 'New title',
+        placeData: placeData
+    });
+});
+
 //404
 app.get('*', function (req, res) {
     res.status(404).render('404-page', {

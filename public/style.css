@@ -51,7 +51,7 @@ h1{
 	padding: 2px;
 	border: 20px solid rgba(0, 0, 0, 0);
 	background-color: gray;
-	float: left;
+	float: left; /* worthless? */
 }
 
 .business img{
@@ -62,6 +62,45 @@ h1{
 .business p{
 	font-weight: bold;
 	text-align: center;
+}
+
+.input-block {
+	text-align: right;
+	font-weight: bold;
+	/*border: 20px solid rgba(0,0,0,0); */
+	background-color: gray;
+	padding: 20px;
+}
+
+.input-element {
+	display: flex;
+  	align-items: center;
+ 	font-size: 20px;
+ 	margin: 10px 0;
+}
+/*As I just learned about flex, flex A B means devide the space between the elements giving each their weight A, and 
+	ensure they have minimum space B */
+.input-element label {
+	font-weight: 500;
+	font-family: Arial, Helvetica, sans-serif;
+	flex: 1 200px;
+	margin-right: 10px;
+}
+
+.input-element input {
+	flex: 5 200px;
+	padding: 10px;
+	font-size: 20px;
+	border: 1px solid #aaa;
+}
+
+.add-button {
+	padding: 10px;
+	font-size: 20px;
+	background-color: #a00826;
+	border: 5px solid #000000;
+	color: white;
+	cursor: pointer;
 }
 
 footer {
