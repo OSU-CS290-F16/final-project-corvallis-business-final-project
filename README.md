@@ -1,5 +1,12 @@
 # cs290_final_project
 
+**Todo after pulling**
+
+First:
+  * npm install 
+Then start the server with:
+  * npm start
+
 ##General structure/explanation
 
 **Basic server function files/database**
