@@ -4,6 +4,7 @@
 
 First:
   * npm install 
+
 Then start the server with:
   * npm start
 
