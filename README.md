@@ -1,7 +1,7 @@
 # cs290_final_project
-Final project for CS290 fall 2016.
 
-General structure/explanation 
+##General structure/explanation
+**Basic server function files/database**
 /package.json
   Contains node.js information, don't edit
 /place-data.json
@@ -9,6 +9,7 @@ General structure/explanation
 /server.js
   Server code that is similar to assignment 4
 
+**The .js and css files along with images**
 /public/index.js
   javascript file that gets applied to all pages
 /public/style.css
@@ -21,13 +22,13 @@ General structure/explanation
   Has the title, script, and css call
   'Calls' another file for the <body>
   
-#These are the documents to edit to change the header/footer for all pages
+**These are the documents to edit to change the header/footer for all pages**
 /views/partials/header.handlebars
   Is the header for all pages, gets 'called" by specific pages
 /views/partials/footer.handlebars
   Is the footer for all pages, gets 'called" by specific pages
 
-#These are the documents to edit to make the website pages
+**These are the documents to edit to make the website pages**
 /views/404-page.handlebars
   The <main> part of the html structure and calls footer/header
   404 page
