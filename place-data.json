@@ -1,0 +1,17 @@
+{
+    "A": {
+        "name": "Store A",
+        "address": "Address A",
+        "type": "1"
+    },
+    "B": {
+        "name": "Store B",
+        "address": "Address B",
+        "type": "2"
+    },
+    "C": {
+        "name": "Store C",
+        "address": "Address C",
+        "type": "3"
+    }
+}

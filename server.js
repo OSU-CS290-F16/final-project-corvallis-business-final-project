@@ -1,76 +1,66 @@
-//This code was tested on mac OSX
-
-//get required stuff
-var http = require('http');
-var fs = require('fs');
-
 var path = require('path');
+var express = require('express');
+var exphbs = require('express-handlebars');
 
-var staticDir = path.join(__dirname, 'public');
-var indexFilename = 'index.html';
-var notFoundFilename = '404.html';
+var app = express();
+//var usersData = require('./users-data');
+var placeData = require('./place-data');
 var port = process.env.PORT || 3000;
 
-//cache files
-var cache = {};
-cache['index.html'] =   fs.readFileSync(staticDir + "/" + indexFilename);
-cache['index.js'] =     fs.readFileSync(staticDir + "/index.js");
-cache['style.css'] =    fs.readFileSync(staticDir + "/style.css");
-cache['404.html'] =     fs.readFileSync(staticDir + "/404.html");
+// Use Handlebars as the view engine for the app.
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
+app.set('view engine', 'handlebars');
+
+/*
+*
+*   Serve requests
+*
+*/
+
+//static files from /public
+app.use(express.static(path.join(__dirname, 'public')));
+
+//for '/' path send view/index-page.handlebars
+app.get('/', function (req, res) {
+    res.status(200).render('index-page', {
+        title: 'Homepage title',
+        placeData: placeData
+    });
+});
 
 
-function handleRequest(request, response) {
-    console.log("== Got request for:", request.url);
+//for '/place/NAME'
+app.get('/place/:place', function (req, res, next) {
+    var place = placeData[req.params.place];
 
-    if(request.url == "/" ){
-        response.statusCode = 200;
-        response.setHeader("Content-Type", "text/html");
-        var contents = cache['index.html'];
-        response.write(contents);
-        response.end();
+    if(place){
+        var placeName = place.name;
+        res.status(200).render('place-page', {
+            title: 'Place page - ' + placeName,
+            place: place,
+            placeName: placeName
+        });
     } else {
-        //check if file is present
-        var temp = 0;
-        var files = fs.readdirSync(staticDir);
-        for (var i in files) {
-            if(request.url == "/" + files[i]){
-                temp = 1;
-            }
-        }
-
-        //if file not there, 404
-        if(temp == 0){
-            response.statusCode = 404;
-            response.setHeader("Content-Type", "text/html");
-            var contents = cache['404.html'];
-            response.write(contents);
-            response.end();
-        } else {
-            //file exists, check if in cache
-            var tempFileName = request.url.replace("/","");
-
-            if(tempFileName in cache){
-                //In cache, send cache version
-                response.statusCode = 200;
-                var contents = cache[tempFileName];
-                response.write(contents);
-                response.end();
-            } else {
-                //not in cache, add to cache and send from cache
-                cache[tempFileName] = fs.readFileSync(staticDir + request.url, 'utf8');
-                //send
-                response.statusCode = 200;
-                var contents = cache[tempFileName];
-                response.write(contents);
-                response.end();
-            }
-        }
+        next();
     }
-}
+});
 
-var server = http.createServer(handleRequest);
+//for '/search' - search page
+app.get('/search', function (req, res) {
+    res.status(200).render('search-page', {
+        title: 'Search title',
+        placeData: placeData
+    });
+});
 
-// Start the server listening on the specified port.
-server.listen(port, function () {
-    console.log("== Server listening on port:", port);
+//404
+app.get('*', function (req, res) {
+    res.status(404).render('404-page', {
+        title: '404'
+    });
+});
+
+// Listen on the specified port.
+app.listen(port, function () {
+    console.log("== Listening on port", port);
 });
