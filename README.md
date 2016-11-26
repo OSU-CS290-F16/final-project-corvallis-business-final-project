@@ -6,7 +6,7 @@
 
 /package.json
 
-  Contains node.js information, don't edit
+  *Contains node.js information, don't edit
   
 /place-data.json
 
