@@ -47,7 +47,7 @@ h1{
 	display: inline-block;
 	margin: 10px;
 	width: 350px;
-	height: 275px;
+	height: 300px;
 	padding: 2px;
 	border: 20px solid rgba(0, 0, 0, 0);
 	background-color: gray;
@@ -78,7 +78,7 @@ h1{
  	font-size: 20px;
  	margin: 10px 0;
 }
-/*As I just learned about flex, flex A B means devide the space between the elements giving each their weight A, and 
+/*As I just learned about flex, flex A B means devide the space between the elements giving each their weight A, and
 	ensure they have minimum space B */
 .input-element label {
 	font-weight: 500;

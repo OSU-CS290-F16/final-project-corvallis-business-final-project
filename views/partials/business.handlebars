@@ -1,7 +1,18 @@
 <section class="business">
-            <div class="business-body">
-                <p class="indent-wrapped"><span class="name">{{name}}</span></p>
-                <p class="indent-wrapped"><span class="type">{{type}}</span></p>
-                <p class="indent-wrapped"><span class="address">{{address}}</span></p>
-            </div>
-        </section>
+    {{#if image}}
+    <img src="./images/{{image}}" height=200px></img><!--Need to make size dynamic, this should work for now (removed width, was width=265px)-->
+    {{#else}}
+    <img src="./images/no-image.jpg" height=200px></img>
+    {{/else}}
+    {{/if}}
+<!--
+    {{#else}}
+    <img src="./images/no-image.jpg" height=200px></img>
+    {{/else}}
+-->
+    <div class="business-body">
+        <p class="indent-wrapped"><span class="name">{{name}}</span></p>
+        <p class="indent-wrapped"><span class="type">{{type}}</span></p>
+        <p class="indent-wrapped"><span class="address">{{address}}</span></p>
+    </div>
+</section>
