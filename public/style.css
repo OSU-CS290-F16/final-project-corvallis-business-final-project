@@ -12,6 +12,13 @@ h1{
 	top: 15px;
 }
 
+/* This will backfire if we add a header picture, unless we link it to main?
+	Maybe do this in a hyperlink on the image instead... */
+	
+img{
+	cursor: pointer;
+}
+
 .navbar-buttons{
 	 height: 18px;
 	 list-style-type: none; /* Removes bullets from list */
@@ -43,7 +50,7 @@ h1{
 
 .business{
 	position: relative;
-	top: -30px;
+	top: -50px;
 	display: inline-block;
 	margin: 10px;
 	width: 350px;
@@ -103,10 +110,16 @@ h1{
 	cursor: pointer;
 }
 
+.info-container h2 {
+	position: relative;
+	top: -40px;
+}
+/* Margins on this are goofed... need it to not have whitespace on side. */
 footer {
   background-color: #333;
   color: white;
   position: fixed;
+  display: block;
   bottom: 0;
   width: 100%;
 }

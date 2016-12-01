@@ -3,7 +3,6 @@ var express = require('express');
 var exphbs = require('express-handlebars');
 
 var app = express();
-//var usersData = require('./users-data');
 var placeData = require('./place-data');
 var port = process.env.PORT || 3000;
 
@@ -31,12 +30,15 @@ app.get('/', function (req, res) {
 
 //for '/place/NAME'
 app.get('/place/:place', function (req, res, next) {
-    var place = placeData[req.params.place];
+	
+	// Fetches based on JSON object's name, not name property
+	var place = placeData[req.params.place];
 
     if(place){
+		//console.log("tested success");
         var placeName = place.name;
         res.status(200).render('place-page', {
-            title: 'Place page - ' + placeName,
+			pageTitle: 'Place Page - ' + placeName, //placeName
             place: place,
             placeName: placeName
         });

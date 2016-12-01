@@ -1,5 +1,5 @@
 {
-    "memorial-union": {
+    "Memorial Union": {
         "name": "Memorial Union",
         "type": "Various",
         "address": "MU address",
@@ -7,7 +7,7 @@
         "zipcode": "97330",
         "image": "memorial_union.jpg"
     },
-    "cascadia": {
+    "Cascadia Market": {
         "name": "Cascadia Market",
         "type": "Grocery Store",
         "address": "Cascadia address",
@@ -15,24 +15,31 @@
         "zipcode": "97330",
         "image": "cascadia.jpg"
     },
-    "A": {
+    "Store A": {
         "name": "Store A",
         "type": "type 1",
         "address": "Address A",
         "city": "Corvallis",
         "zipcode": "97330"
     },
-    "B": {
+    "Store B": {
         "name": "Store B",
         "type": "type 2",
         "address": "Address B",
         "city": "Corvallis",
         "zipcode": "97330"
     },
-    "C": {
+    "Store C": {
         "name": "Store C",
         "type": "type 3",
         "address": "Address C",
+        "city": "Corvallis",
+        "zipcode": "97330"
+    },
+	"Store D": {
+        "name": "Store D",
+        "type": "type 4",
+        "address": "Address D",
         "city": "Corvallis",
         "zipcode": "97330"
     }
