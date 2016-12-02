@@ -1,13 +1,13 @@
 <section class="business">
     {{#if image}}
-	<a href="./place/{{name}}">
-    <img src="./images/{{image}}" height=200px></img>
-	<!--Need to make size dynamic, this should work for now (removed width, was width=265px)-->
+    <a href="./place/{{name}}">
+        <img src="./images/{{image}}" height=200px></img>
+        <!--Need to make size dynamic, this should work for now (removed width, was width=265px)-->
     </a>
-	{{else}}
-	<a href="*">
-    <img src="./images/no-image.jpg" height=200px></img>
-	</a>
+    {{else}}
+    <a href="./place/{{name}}">
+        <img src="./images/no-image.jpg" height=200px></img>
+    </a>
     {{/if}}
 
     <div class="business-body">
