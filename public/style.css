@@ -58,6 +58,7 @@ h1{
 	float: left; /* worthless? */
 }
 
+/* this needs to be fixed... photos aren't aligned right */
 .business img{
 	display: block;
 	margin: auto;
@@ -126,7 +127,7 @@ h1{
 }
 
 .info-container li{
-	margin: 0 0 10px 0;
+	margin: 0 0 10px 0px;
 }
 
 .info-container img{
