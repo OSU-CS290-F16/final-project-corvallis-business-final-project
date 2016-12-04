@@ -16,10 +16,6 @@ h1{
 	cursor: pointer;
 }
 
-ul{
-	list-style-type: none;
-}
-
 .navbar-buttons{
 	 height: 18px;
 	 list-style-type: none; /* Removes bullets from list */
@@ -111,17 +107,41 @@ ul{
 	cursor: pointer;
 }
 
-.info-container h2 {
+.info-container{
 	position: relative;
 	top: -40px;
 }
-/* Margins on this are goofed... need it to not have whitespace on side. */
+
+.info-container p{
+	padding-left: 50px;
+}
+
+.info-container h2 {
+	position: relative;	
+}
+
+.info-container ul{
+	list-style-type: none;
+	font-size: 100%; /* might want to increase this */
+}
+
+.info-container li{
+	margin: 0 0 10px 0;
+}
+
+.info-container img{
+	padding: 1px;
+	border:2px solid #021a40;
+	margin-right: 1.5cm;
+}
+
 footer {
   background-color: #333;
   color: white;
   position: fixed;
   display: block;
-  bottom: 0;
+  bottom: 0; /* this fixed the footer for some reason */
+  left: 0px;
   width: 100%;
 }
 

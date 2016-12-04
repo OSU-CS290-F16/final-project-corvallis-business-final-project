@@ -4,18 +4,21 @@
   <div class="info-container">
     <h2>{{placeName}}</h2>
 	
-	{{#if place.image}}
-	<img src="../images/{{place.image}}" height=300px></img>
-	{{else}}
-	<img src="../images/no-image.jpg" height=300px></img>
-	{{/if}}
+	<p>
+		{{#if place.image}}
+		<img src="../images/{{place.image}}" height=300px style="float: left"></img>
+		{{else}}
+		<img src="../images/no-image.jpg" height=300px style="float: left"></img>
+		{{/if}}
 	
-	<ul>
-	<li><b>Category:</b> {{place.type}}</li>
-	<li><b>Phone:</b> {{place.phone}}</li>
-	<li><b>Address:</b> {{place.address}}, {{place.city}} {{place.zipcode}}</li>
-	</ul>
-	
+		<ul>
+		<li>{{place.description}}</li>
+		<li><b>Category:</b> {{place.type}}</li>
+		<li><b>Phone:</b> {{place.phone}}</li>
+		<li><b>Address:</b> {{place.address}}, {{place.city}}, {{place.zipcode}}</li>
+		<li>Image courtesy of {{place.image_courtesy}}</li>
+		</ul>
+	</p>
   </div>
 </main>
 

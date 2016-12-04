@@ -1,13 +1,14 @@
 {
     "Memorial Union": {
-        "name": "Memorial Union",
+        "name": "The Memorial Union",
         "type": "Various",
 		"phone": "000-000-0000",
         "address": "MU address",
         "city": "Corvallis",
         "zipcode": "97330",
         "image": "memorial_union.jpg",
-        "description": "Enter store description"
+        "description": "Enter store description",
+		"image_courtesy": "Enter image courtesy"
     },
     "Cascadia Market": {
         "name": "Cascadia Market",
@@ -17,7 +18,8 @@
         "city": "Corvallis",
         "zipcode": "97330",
         "image": "cascadia.jpg",
-        "description": "Enter store description"
+        "description": "Enter store description",
+		"image_courtesy": "Enter image courtesy"
     },
     "Store A": {
         "name": "Store A",
@@ -26,7 +28,8 @@
         "address": "Address A",
         "city": "Corvallis",
         "zipcode": "97330",
-        "description": "Enter store description"
+        "description": "Enter store description",
+		"image_courtesy": "Enter image courtesy"
     },
     "Store B": {
         "name": "Store B",
@@ -35,7 +38,8 @@
         "address": "Address B",
         "city": "Corvallis",
         "zipcode": "97330",
-        "description": "Enter store description"
+        "description": "Enter store description",
+		"image_courtesy": "Enter image courtesy"
     },
     "Store C": {
         "name": "Store C",
@@ -44,7 +48,8 @@
         "address": "Address C",
         "city": "Corvallis",
         "zipcode": "97330",
-        "description": "Enter store description"
+        "description": "Enter store description",
+		"image_courtesy": "Enter image courtesy"
     },
 	"Store D": {
         "name": "Store D",
@@ -53,6 +58,7 @@
         "address": "Address D",
         "city": "Corvallis",
         "zipcode": "97330",
-        "description": "Enter store description"
+        "description": "Enter store description",
+		"image_courtesy": "Enter image courtesy"
     }
 }
