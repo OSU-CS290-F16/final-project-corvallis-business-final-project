@@ -3,7 +3,19 @@
 <main>
   <div class="info-container">
     <h2>{{placeName}}</h2>
-
+	
+	{{#if place.image}}
+	<img src="../images/{{place.image}}" height=300px></img>
+	{{else}}
+	<img src="../images/no-image.jpg" height=300px></img>
+	{{/if}}
+	
+	<ul>
+	<li><b>Category:</b> {{place.type}}</li>
+	<li><b>Phone:</b> {{place.phone}}</li>
+	<li><b>Address:</b> {{place.address}}, {{place.city}} {{place.zipcode}}</li>
+	</ul>
+	
   </div>
 </main>
 

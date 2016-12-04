@@ -2,6 +2,7 @@
     "Memorial Union": {
         "name": "Memorial Union",
         "type": "Various",
+		"phone": "000-000-0000",
         "address": "MU address",
         "city": "Corvallis",
         "zipcode": "97330",
@@ -11,6 +12,7 @@
     "Cascadia Market": {
         "name": "Cascadia Market",
         "type": "Grocery Store",
+		"phone": "000-000-0000",
         "address": "Cascadia address",
         "city": "Corvallis",
         "zipcode": "97330",
@@ -20,6 +22,7 @@
     "Store A": {
         "name": "Store A",
         "type": "type 1",
+		"phone": "000-000-0000",
         "address": "Address A",
         "city": "Corvallis",
         "zipcode": "97330",
@@ -28,6 +31,7 @@
     "Store B": {
         "name": "Store B",
         "type": "type 2",
+		"phone": "000-000-0000",
         "address": "Address B",
         "city": "Corvallis",
         "zipcode": "97330",
@@ -36,6 +40,7 @@
     "Store C": {
         "name": "Store C",
         "type": "type 3",
+		"phone": "000-000-0000",
         "address": "Address C",
         "city": "Corvallis",
         "zipcode": "97330",
@@ -44,6 +49,7 @@
 	"Store D": {
         "name": "Store D",
         "type": "type 4",
+		"phone": "000-000-0000",
         "address": "Address D",
         "city": "Corvallis",
         "zipcode": "97330",

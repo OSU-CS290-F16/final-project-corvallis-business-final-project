@@ -12,11 +12,12 @@ h1{
 	top: 15px;
 }
 
-/* This will backfire if we add a header picture, unless we link it to main?
-	Maybe do this in a hyperlink on the image instead... */
-	
-img{
+#business img{
 	cursor: pointer;
+}
+
+ul{
+	list-style-type: none;
 }
 
 .navbar-buttons{
