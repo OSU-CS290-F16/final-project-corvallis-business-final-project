@@ -1,68 +1,68 @@
 {
-    "The Memorial Union": {
-        "name": "The Memorial Union",
-        "type": "Various",
-		"phone": "541-737-2416",
-        "address": "2501 SW Jefferson Way",
-        "city": "Corvallis",
-        "zipcode": "97330",
-        "image": "memorial_union.jpg",
-        "description": "\"The Memorial Union is the student activity center at Oregon State University... It contains a ballroom, cafeteria, bowling alley, shops, and study areas.\" - Wikipedia",
-		"image_courtesy": "Poughkeepsie Journal"
-    },
-    "Cascadia Market": {
-        "name": "Cascadia Market",
-        "type": "Grocery Store",
-		"phone": "N/A (UHDS Owned)",
-        "address": "1701 SW Western Blvd",
-        "city": "Corvallis",
-        "zipcode": "97330",
-        "image": "cascadia.jpg",
-        "description": "\"Cascadia Market, located in the International Living-Learning Center on the south side of campus, is an on-campus market featuring a variety of grocery items, international specialty foods, household items, and grab-and-go meals.\" - OSU Website",
-		"image_courtesy": "INTO OSU"
-    },
-    "American Dream Pizza": {
-        "name": "American Dream Pizza",
-        "type": "Pizzeria",
-		"phone": "541-757-1713",
-        "address": "2525 NW Monroe Ave",
-        "city": "Corvallis",
-        "zipcode": "97330",
-		"image": "american_dream.jpg",
-        "description": "\"Budget pizzeria with eclectic art on the walls features thick-crust pies whole or by the slice.\" - Google",
-		"image_courtesy": "Flickr"
-    },
-    "Cibelli's Pizza": {
-        "name": "Cibelli's Pizza",
-        "type": "Pizzeria",
-		"phone": "541-286-4311",
-        "address": "820 NW 9th St.",
-        "city": "Corvallis",
-        "zipcode": "97330",
-		"image": "cibellis.jpg",
-        "description": "\"Local pizzeria offering hand-tossed, NYC-style pies & gluten-free crust options in a casual space.\" - Google",
-		"image_courtesy": "visitcorvallis.com"
-    },
-    "Block 15 Brewing Co": {
-        "name": "Block 15 Brewing Co",
-        "type": "Brewery",
-		"phone": "541-758-2077",
-        "address": "300 SW Jefferson Ave",
-        "city": "Corvallis",
-        "zipcode": "97330",
-		"image": "block15.jpg",
-        "description": "\"Laid-back brewpub crafting beers including lagers & IPAs plus serving sandwiches & pasta.\" - Google",
-		"image_courtesy": "visitcorvallis.com"
-    },
-	"Evergreen Indian Cuisine": {
-        "name": "Evergreen Indian Cuisine",
-        "type": "Indian Restaurant",
-		"phone": "541-754-7944",
-        "address": "136 SW 3rd St.",
-        "city": "Corvallis",
-        "zipcode": "97330",
-		"image": "evergreen.jpg",
-        "description": "\"Homey, long-standing Indian eatery featuring South Indian tandoori dishes & a buffet.\" - Google",
-		"image_courtesy": "Yelp"
-    }
+  "The Memorial Union": {
+    "name": "The Memorial Union",
+    "type": "Various",
+    "phone": "541-737-2416",
+    "address": "2501 SW Jefferson Way",
+    "city": "Corvallis",
+    "zipcode": "97330",
+    "image": "memorial_union.jpg",
+    "description": "\"The Memorial Union is the student activity center at Oregon State University... It contains a ballroom, cafeteria, bowling alley, shops, and study areas.\" - Wikipedia",
+    "image_courtesy": "Poughkeepsie Journal"
+  },
+  "Cascadia Market": {
+    "name": "Cascadia Market",
+    "type": "Grocery Store",
+    "phone": "N/A (UHDS Owned)",
+    "address": "1701 SW Western Blvd",
+    "city": "Corvallis",
+    "zipcode": "97330",
+    "image": "cascadia.jpg",
+    "description": "\"Cascadia Market, located in the International Living-Learning Center on the south side of campus, is an on-campus market featuring a variety of grocery items, international specialty foods, household items, and grab-and-go meals.\" - OSU Website",
+    "image_courtesy": "INTO OSU"
+  },
+  "American Dream Pizza": {
+    "name": "American Dream Pizza",
+    "type": "Pizzeria",
+    "phone": "541-757-1713",
+    "address": "2525 NW Monroe Ave",
+    "city": "Corvallis",
+    "zipcode": "97330",
+    "image": "american_dream.jpg",
+    "description": "\"Budget pizzeria with eclectic art on the walls features thick-crust pies whole or by the slice.\" - Google",
+    "image_courtesy": "Flickr"
+  },
+  "Cibelli's Pizza": {
+    "name": "Cibelli's Pizza",
+    "type": "Pizzeria",
+    "phone": "541-286-4311",
+    "address": "820 NW 9th St.",
+    "city": "Corvallis",
+    "zipcode": "97330",
+    "image": "cibellis.jpg",
+    "description": "\"Local pizzeria offering hand-tossed, NYC-style pies & gluten-free crust options in a casual space.\" - Google",
+    "image_courtesy": "visitcorvallis.com"
+  },
+  "Block 15 Brewing Co": {
+    "name": "Block 15 Brewing Co",
+    "type": "Brewery",
+    "phone": "541-758-2077",
+    "address": "300 SW Jefferson Ave",
+    "city": "Corvallis",
+    "zipcode": "97330",
+    "image": "block15.jpg",
+    "description": "\"Laid-back brewpub crafting beers including lagers & IPAs plus serving sandwiches & pasta.\" - Google",
+    "image_courtesy": "visitcorvallis.com"
+  },
+  "Evergreen Indian Cuisine": {
+    "name": "Evergreen Indian Cuisine",
+    "type": "Indian Restaurant",
+    "phone": "541-754-7944",
+    "address": "136 SW 3rd St.",
+    "city": "Corvallis",
+    "zipcode": "97330",
+    "image": "evergreen.jpg",
+    "description": "\"Homey, long-standing Indian eatery featuring South Indian tandoori dishes & a buffet.\" - Google",
+    "image_courtesy": "Yelp"
+  }
 }

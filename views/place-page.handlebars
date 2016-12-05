@@ -15,7 +15,7 @@
 		<li>{{place.description}}</li>
 		<li><b>Category:</b> {{place.type}}</li>
 		<li><b>Phone:</b> {{place.phone}}</li>
-		<li><b>Address:</b> {{place.address}}, {{place.city}}, {{place.zipcode}}</li>
+		<li><b>Address:</b> <a href="http://maps.google.com/?q={{place.address}}, {{place.city}}, {{place.zipcode}}">{{place.address}}, {{place.city}}, {{place.zipcode}}</a></li>
 		<li>Image courtesy of {{place.image_courtesy}}</li>
 		</ul>
 	</p>

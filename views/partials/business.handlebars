@@ -11,8 +11,8 @@
     {{/if}}
 
     <div class="business-body">
-        <p class="indent-wrapped"><span class="name">{{name}}</span></p>
+        <p class="indent-wrapped"><span class="name"><a href="place/{{name}}">{{name}}</a></span></p>
         <p class="indent-wrapped"><span class="type">{{type}}</span></p>
-        <p class="indent-wrapped"><span class="address">{{address}}</span></p>
+        <p class="indent-wrapped"><span class="address"><a href="http://maps.google.com/?q={{place.address}}, {{place.city}}, {{place.zipcode}}">{{address}}</a></span></p>
     </div>
 </section>

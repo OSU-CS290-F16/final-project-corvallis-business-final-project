@@ -69,6 +69,15 @@ h1{
 	text-align: center;
 }
 
+.business a{
+	color: black;
+	text-decoration: none;
+}
+
+.business a:hover{
+	text-decoration: underline;
+}
+
 .input-block {
 	text-align: right;
 	font-weight: bold;
@@ -145,6 +154,14 @@ select {
 	padding: 1px;
 	border:2px solid #021a40;
 	margin-right: 1.5cm;
+}
+
+.info-container a{
+	text-decoration: none;
+}
+
+.info-container a:hover{
+	text-decoration: underline;
 }
 
 footer {
