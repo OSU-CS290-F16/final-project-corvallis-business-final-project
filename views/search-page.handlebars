@@ -8,10 +8,10 @@
     <!--Also a search box so you can look up places -->
     <div class="input-block">
       <div class="input-element">
-          <select id="user-select">
+          <select id="business-select">
           <!--We should have a drop down menu to select from categories (ie food, attraction, etc) -->
-          <option value="" disabled selected>Search by catagory</option>
-              {{#each catagories}}
+          <option value="" disabled selected>Search by category</option>
+              {{#each categories}}
                   <option value={{@key}}>{{name}}</option>
               {{/each}}
               <option value="test-1"> test-1 </option>
@@ -21,8 +21,8 @@
           </select>
       </div>
         <div class="input-element">
-           <label for="input-search-buissnesses">Search by name:</label>
-           <input type="text" id="input-search-buissnesses">
+           <label for="input-search-businesses">Search by name:</label>
+           <input type="text" id="input-search-businesses">
        </div>
        <button type="button" class="add-button">Search</button> <!-- if needed -->
      </div>
