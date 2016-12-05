@@ -64,5 +64,15 @@
 		"image": "evergreen.jpg",
         "description": "\"Homey, long-standing Indian eatery featuring South Indian tandoori dishes & a buffet.\" - Google",
 		"image_courtesy": "Yelp"
+    },
+	"Store D": {
+        "name": "Store D",
+        "type": "type 4",
+		"phone": "000-000-0000",
+        "address": "Address D",
+        "city": "Corvallis",
+        "zipcode": "97330",
+        "description": "Enter store description",
+		"image_courtesy": "Enter image courtesy"
     }
 }

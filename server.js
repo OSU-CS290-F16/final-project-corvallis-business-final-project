@@ -93,28 +93,23 @@ app.post('/create/', function (req, res, next) {
         });
 
         //add to json
-        /*var temp = JSON.stringify({
+        placeData[varName] = {
             name: varName,
             type: varType,
             phone: varPhone,
             address: varAddress,
             city: "Corvallis",
             zipcode: "97330",
-            image: "public/images/" + req.body.name + ".jpg",
+            image: req.body.name + ".jpg",
             description: varDescription,
             image_courtesy: "Nan"
-        });*/
-/*
-        placeData.varName = varName;
+        }
 
         fs.writeFile("place-data.json", JSON.stringify(placeData, null, 2), function (err) {
             if (err) return console.log(err);
             console.log(JSON.stringify(placeData));
             console.log('writing to ' + "place-data.json");
         });
-*/
-        //var obj = JSON.parse(fs.readFileSync('place-data.json', 'utf8'));
-        //placeData.push(newEntry);
 
         //send success message
         res.status(200).send();
