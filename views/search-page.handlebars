@@ -1,12 +1,31 @@
 {{> header}}
-<!-- test -->
+
 <main>
   <div class="info-container">
 
     <h2>Search page</h2>
-    <!--We should have a drop down menu to select from categories (ie food, attraction, etc) -->
+     
     <!--Also a search box so you can look up places -->
-
+    <div class="input-block">
+      <div class="input-element">
+          <select id="user-select">
+          <!--We should have a drop down menu to select from categories (ie food, attraction, etc) -->
+          <option value="" disabled selected>Search by catagory</option>
+              {{#each catagories}}
+                  <option value={{@key}}>{{name}}</option>
+              {{/each}}
+              <option value="test-1"> test-1 </option>
+              <option value="test-2"> test-2 </option>
+              <option value="test-3"> test-3 </option>
+              <option value="test-4"> test-4 </option>
+          </select>
+      </div>
+        <div class="input-element">
+           <label for="input-search-buissnesses">Search by name:</label>
+           <input type="text" id="input-search-buissnesses">
+       </div>
+       <button type="button" class="add-button">Search</button> <!-- if needed -->
+     </div>
   </div>
 </main>
 
