@@ -69,50 +69,59 @@ app.get('/new', function (req, res) {
     });
 });
 
+function checkValidUrl(url) {
+    return(url.match(/\.(jpeg|jpg|png)$/) != null);
+}
+
 app.post('/create/', function (req, res, next) {
+    //make sure things came accross
     if(req.body && req.body.url){
-        var varName = req.body.name;
-        var varType = req.body.type;
-        var varPhone = req.body.phone;
-        var varAddress = req.body.address;
-        var varDescription = req.body.description;
+        if(!placeData[req.body.name] && checkValidUrl(req.body.url)){
+            var varName = req.body.name;
+            var varType = req.body.type;
+            var varPhone = req.body.phone;
+            var varAddress = req.body.address;
+            var varDescription = req.body.description;
 
 
-        //download and save image in correct place
-        var download = function(uri, filename, callback){
-            request.head(uri, function(err, res, body){
-                console.log('content-type:', res.headers['content-type']);
-                console.log('content-length:', res.headers['content-length']);
+            //download and save image in correct place
+            var download = function(uri, filename, callback){
+                request.head(uri, function(err, res, body){
+                    console.log('content-type:', res.headers['content-type']);
+                    console.log('content-length:', res.headers['content-length']);
 
-                request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                    request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                });
+            };
+
+            download(req.body.url, "public/images/" + req.body.name + ".jpg", function(){
+                console.log('done');
             });
-        };
 
-        download(req.body.url, "public/images/" + req.body.name + ".jpg", function(){
-            console.log('done');
-        });
+            //add to json
+            placeData[varName] = {
+                name: varName,
+                type: varType,
+                phone: varPhone,
+                address: varAddress,
+                city: "Corvallis",
+                zipcode: "97330",
+                image: req.body.name + ".jpg",
+                description: varDescription,
+                image_courtesy: "Nan"
+            }
 
-        //add to json
-        placeData[varName] = {
-            name: varName,
-            type: varType,
-            phone: varPhone,
-            address: varAddress,
-            city: "Corvallis",
-            zipcode: "97330",
-            image: req.body.name + ".jpg",
-            description: varDescription,
-            image_courtesy: "Nan"
+            fs.writeFile("place-data.json", JSON.stringify(placeData, null, 2), function (err) {
+                if (err) return console.log(err);
+                console.log(JSON.stringify(placeData));
+                console.log('writing to ' + "place-data.json");
+            });
+
+            //send success message
+            res.status(200).send();
+        } else {
+            res.status(400).send("Location name already in database or Not valid image url");
         }
-
-        fs.writeFile("place-data.json", JSON.stringify(placeData, null, 2), function (err) {
-            if (err) return console.log(err);
-            console.log(JSON.stringify(placeData));
-            console.log('writing to ' + "place-data.json");
-        });
-
-        //send success message
-        res.status(200).send();
     } else {
         res.status(400).send("No url");
     }
