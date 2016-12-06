@@ -46,6 +46,12 @@ h1{
 	 float: right;
 }
 
+.info-text p{
+	position: relative;
+	bottom: 45px;
+	font-size: 110%;
+}
+
 .business{
 	position: relative;
 	top: -50px;
@@ -178,7 +184,18 @@ footer {
 footer .copyright {
   height: 30px;
   line-height: 30px;
+  float: right;
   text-align: right;
   padding-right: 25px;
   font-weight: 200;
+  display: inline-block;
+}
+
+footer .signage{
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  padding-right: 25px;
+  font-weight: 200;
+  display: inline-block;
 }

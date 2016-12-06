@@ -1,9 +1,12 @@
 {{> header}}
 
 <main>
+	<div class="info-text">
+	<p>Welcome to Corvallis Eats! Click the picture or name of a business to view its individual page and information.<br>        
+		   Click an address to go to a corresponding Google Maps page. New businesses can be added via 'Add A Business'.</p>
+	</div>
     <div>
-
-        <!-- These show the businesses in place-data.json -->
+		<!-- These show the businesses in place-data.json -->
         {{#each placeData}}
         {{> business}}
         {{/each}}
