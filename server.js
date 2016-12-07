@@ -25,6 +25,37 @@ app.use(bodyParser.json());
 //static files from /public
 app.use(express.static(path.join(__dirname, 'public')));
 
+//register helper
+var Handlebars = require('handlebars');
+Handlebars.registerHelper('if_eq', function(a, b, options) {
+    if(a == b){
+        //console.log(a + " is the same as " + b);
+        return options.fn(this);
+    } else {
+        //console.log(a + " is NOT the same as " + b);
+        return options.inverse(this);
+    }
+});
+Handlebars.registerHelper('if_search', function(a, options) {
+    if(a == "search"){
+        //console.log("is search");
+        return options.fn(this);
+    } else {
+        //console.log("is NOT search");
+        return options.inverse(this);
+    }
+});
+Handlebars.registerHelper('if_category', function(a, options) {
+    if(a == "category"){
+        //console.log("is category");
+        return options.fn(this);
+    } else {
+        //console.log("is NOT category");
+        return options.inverse(this);
+    }
+});
+
+
 //for '/' path send view/index-page.handlebars
 app.get('/', function (req, res) {
     res.status(200).render('index-page', {
@@ -58,6 +89,16 @@ app.get('/search', function (req, res) {
     res.status(200).render('search-page', {
         title: 'Search title',
         placeData: placeData
+    });
+});
+
+//for '/search-results' - search page
+app.get('/search-results', function (req, res) {
+    res.status(200).render('search-page-results', {
+        title: 'Search title',
+        placeData: placeData,
+        type: req.query.t,
+        content: req.query.c
     });
 });
 

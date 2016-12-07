@@ -91,6 +91,7 @@ h1{
 	/*border: 20px solid rgba(0,0,0,0); */
 	background-color: gray;
 	padding: 20px;
+	margin-bottom: 1cm;
 }
 
 .input-element {
@@ -145,7 +146,7 @@ select {
 }
 
 .info-container h2 {
-	position: relative;	
+	position: relative;
 }
 
 .info-container ul{

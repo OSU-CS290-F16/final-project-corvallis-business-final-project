@@ -51,9 +51,36 @@ function addNewPlace(){
 
 }
 
+function searchFunction(){
+    //alert("click");
+    var inputValue = document.getElementById("input-search-businesses").value;
+    if(inputValue.trim()){
+        window.location = "http://localhost:3000/search-results?t=" + encodeURIComponent("search") + "&c=" + encodeURIComponent(inputValue);
+    } else {
+        alert("Enter something in search box");
+    }
+}
+
+function categoryFunction(){
+    //alert("select");
+    var cs = document.getElementById('business-select');
+    var selectionOption = cs.options[cs.selectedIndex].value;
+    window.location = "http://localhost:3000/search-results?t=" + encodeURIComponent("category") + "&c=" + encodeURIComponent(selectionOption);
+}
+
 document.addEventListener('DOMContentLoaded', function (event) {
     var addNewPlaceButton = document.getElementById('add-new-place-button');
     if(addNewPlaceButton){
         addNewPlaceButton.addEventListener('click', addNewPlace);
+    }
+
+    var searchButton = document.getElementById('search-button');
+    if(searchButton){
+        searchButton.addEventListener('click', searchFunction);
+    }
+
+    var categorySelect = document.getElementById('business-select');
+    if(categorySelect){
+        categorySelect.addEventListener('change', categoryFunction);
     }
 });

@@ -23,8 +23,24 @@
             </div>
             <button type="button" id="search-button" class="add-button">Search</button> <!-- if needed -->
         </div>
-
     </div>
+
+    {{#if_search type}}
+        {{#each placeData}}
+            {{#if_eq name ../content}}
+            {{> business}}
+            {{/if_eq}}
+        {{/each}}
+    {{/if_search}}
+
+    {{#if_category type}}
+        {{#each placeData}}
+            {{#if_eq type ../content}}
+            {{> business}}
+            {{/if_eq}}
+        {{/each}}
+    {{/if_category}}
+
 </main>
 
 {{> footer}}
