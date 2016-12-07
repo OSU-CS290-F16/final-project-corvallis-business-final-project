@@ -59,7 +59,7 @@ Handlebars.registerHelper('if_category', function(a, options) {
 //for '/' path send view/index-page.handlebars
 app.get('/', function (req, res) {
     res.status(200).render('index-page', {
-        title: 'Homepage title',
+        title: 'Corvallis Eats',
         placeData: placeData
     });
 });
@@ -75,7 +75,8 @@ app.get('/place/:place', function (req, res, next) {
         //console.log("tested success");
         var placeName = place.name;
         res.status(200).render('place-page', {
-            pageTitle: 'Place Page - ' + placeName, //placeName
+            title: placeName,
+            pageTitle: placeName, //placeName
             place: place,
             placeName: placeName
         });
@@ -87,7 +88,7 @@ app.get('/place/:place', function (req, res, next) {
 //for '/search' - search page
 app.get('/search', function (req, res) {
     res.status(200).render('search-page', {
-        title: 'Search title',
+        title: 'Search',
         placeData: placeData
     });
 });
@@ -95,7 +96,7 @@ app.get('/search', function (req, res) {
 //for '/search-results' - search page
 app.get('/search-results', function (req, res) {
     res.status(200).render('search-page-results', {
-        title: 'Search title',
+        title: 'Search',
         placeData: placeData,
         type: req.query.t,
         content: req.query.c
@@ -105,7 +106,7 @@ app.get('/search-results', function (req, res) {
 //for '/new' - search page
 app.get('/new', function (req, res) {
     res.status(200).render('new-page', {
-        title: 'New title',
+        title: 'Add new place',
         placeData: placeData
     });
 });
